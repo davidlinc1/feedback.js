@@ -1,7 +1,7 @@
 {
-  "name": "@ivoviz/feedback.js",
+  "name": "@davidlinc1/feedback.js",
   "version": "1.0.0-alpha.1",
-  "description": "Feedback tool similar to Google's.",
+  "description": "Feedback tool for Aeries",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivoviz/feedback.git"
+    "url": "git+https://github.com/davidlinc1/feedback.js.git"
   },
   "keywords": [
     "feedback"
   ],
-  "author": "ivoviz",
+  "author": "davidlinc1",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ivoviz/feedback/issues"
+    "url": "https://github.com/davidlinc1/feedback.js/issues"
   },
-  "homepage": "https://github.com/ivoviz/feedback#readme",
+  "homepage": "https://github.com/davidlinc1/feedback.js#readme",
   "dependencies": {
     "html2canvas": "1.0.0-alpha.9"
   }
