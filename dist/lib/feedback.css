@@ -3,6 +3,7 @@
   display: flex;
   align-self: center;
   cursor: pointer;
+  padding: 1rem;
 }
 .feedback-widget-button-border {
   border-color: #C0C6D0;
