@@ -9,6 +9,15 @@
   border-color: #C0C6D0;
   border-right-width: 1px;
 }
+.font-aeries {
+  font-family: "Aeries Sans";
+}
+.font-body {
+  font-family: "Nunito Sans";
+}
+.font-semi-bold {
+  font-weight: 600;
+}
 #feedback-js {
   z-index: 9999;
   position: fixed;
