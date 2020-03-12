@@ -1,3 +1,13 @@
+.feedback-widget-button {
+  display: -webkit-box;
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+}
+.feedback-widget-button-border {
+  border-color: #C0C6D0;
+  border-right-width: 1px;
+}
 #feedback-js {
   z-index: 9999;
   position: fixed;

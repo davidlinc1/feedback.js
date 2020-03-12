@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/davidlinc1/feedback.js#readme",
   "dependencies": {
+    "@davidlinc1/feedback.js": "^1.0.0-alpha.1",
     "html2canvas": "1.0.0-alpha.9"
   }
 }

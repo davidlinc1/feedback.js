@@ -13,7 +13,7 @@ class Feedback {
                 'details', 'summary'
             ],
             footnote: 'Click the image above to highlight or obscure areas of the screenshot.',
-            endpoint: 'https://very-api-so-cool.url/'
+            endpoint: ''
         };
         this._html2canvasOptions = {
             allowTaint: true
@@ -476,8 +476,9 @@ class Feedback {
         const drawOptions = document.createElement('div');
         drawOptions.className = `${this._options.classPrefix}draw-options`;
         const draggerContainer = document.createElement('div');
-        draggerContainer.className = 'dragger flex self-center border-r border-neutral-600';
+        draggerContainer.className = 'dragger feedback-widget-button feedback-widget-button-border';
         // draggerContainer.innerText = 'dragger';
+
         draggerContainer.innerHTML = '<svg class="m-4" width="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="black" fill-rule="evenodd"> <g id="icon-shape"> <path d="M10,9 C11.1045695,9 12,8.1045695 12,7 C12,5.8954305 11.1045695,5 10,5 C8.8954305,5 8,5.8954305 8,7 C8,8.1045695 8.8954305,9 10,9 Z M10,15 C11.1045695,15 12,14.1045695 12,13 C12,11.8954305 11.1045695,11 10,11 C8.8954305,11 8,11.8954305 8,13 C8,14.1045695 8.8954305,15 10,15 Z" id="Combined-Shape"></path> </g> </g> </svg>'
         draggerContainer.addEventListener('mousedown', this._dragStart);
         document.addEventListener('mousemove', this._dragDrag);
@@ -486,22 +487,22 @@ class Feedback {
         drawOptions.appendChild(draggerContainer);
         const highlightButtonContainer = document.createElement('div');
         const highlightButton = document.createElement('button');
-        highlightButton.className = 'p-4 border-r border-neutral-600';
-        highlightButton.innerHTML = '<svg class="inline mr-1" width="18px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="black" fill-rule="evenodd"> <g id="icon-shape"> <path d="M12.2928932,3.70710678 L0,16 L0,20 L4,20 L16.2928932,7.70710678 L12.2928932,3.70710678 Z M13.7071068,2.29289322 L16,0 L20,4 L17.7071068,6.29289322 L13.7071068,2.29289322 Z" id="Combined-Shape"></path> </g> </g> </svg> Highlight';
+        highlightButton.className = 'feedback-widget-button feedback-widget-button-border';
+        highlightButton.innerHTML = '<svg style="margin-right: 0.25rem; display: inline;" width="18px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="black" fill-rule="evenodd"> <g id="icon-shape"> <path d="M12.2928932,3.70710678 L0,16 L0,20 L4,20 L16.2928932,7.70710678 L12.2928932,3.70710678 Z M13.7071068,2.29289322 L16,0 L20,4 L17.7071068,6.29289322 L13.7071068,2.29289322 Z" id="Combined-Shape"></path> </g> </g> </svg> Highlight';
         highlightButton.type = 'button';
         highlightButton.addEventListener('click', () => this._state.highlight = true);
         highlightButtonContainer.appendChild(highlightButton);
         drawOptions.appendChild(highlightButtonContainer);
         const blackoutButtonContainer = document.createElement('div');
         const blackoutButton = document.createElement('button');
-        blackoutButton.className = 'p-4 border-r border-neutral-600';
-        blackoutButton.innerHTML = '<svg class="inline mr-1" width="18px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="black" fill-rule="evenodd"> <g id="icon-shape"> <path d="M16.6166796,6.21174757 C17.9442722,7.21287251 19.0378031,8.50785377 19.8005808,10 C17.9798698,13.5616759 14.2746855,16 10,16 C9.02896677,16 8.08732049,15.8741795 7.19047483,15.6379523 L8.96391361,13.8645135 C9.29436687,13.9528855 9.64168134,14 10,14 C12.209139,14 14,12.209139 14,10 C14,9.64168134 13.9528855,9.29436687 13.8645135,8.96391361 L16.6166796,6.21174757 Z M12.8095252,4.36204771 C11.9126795,4.12582046 10.9710332,4 10,4 C5.72531453,4 2.02013017,6.43832409 0.199419187,10 C0.962196907,11.4921462 2.05572777,12.7871275 3.38332044,13.7882524 L6.13548648,11.0360864 C6.04711451,10.7056331 6,10.3583187 6,10 C6,7.790861 7.790861,6 10,6 C10.3583187,6 10.7056331,6.04711451 11.0360864,6.13548648 L12.8095252,4.36204771 Z M16.363961,2.22182541 L17.7781746,3.63603897 L3.63603897,17.7781746 L2.22182541,16.363961 L16.363961,2.22182541 Z" id="Combined-Shape"></path> </g> </g> </svg> Blackout';
+        blackoutButton.className = 'feedback-widget-button feedback-widget-button-border';
+        blackoutButton.innerHTML = '<svg style="margin-right: 0.25rem; display: inline;" width="18px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Page-1" stroke="none" stroke-width="1" fill="black" fill-rule="evenodd"> <g id="icon-shape"> <path d="M16.6166796,6.21174757 C17.9442722,7.21287251 19.0378031,8.50785377 19.8005808,10 C17.9798698,13.5616759 14.2746855,16 10,16 C9.02896677,16 8.08732049,15.8741795 7.19047483,15.6379523 L8.96391361,13.8645135 C9.29436687,13.9528855 9.64168134,14 10,14 C12.209139,14 14,12.209139 14,10 C14,9.64168134 13.9528855,9.29436687 13.8645135,8.96391361 L16.6166796,6.21174757 Z M12.8095252,4.36204771 C11.9126795,4.12582046 10.9710332,4 10,4 C5.72531453,4 2.02013017,6.43832409 0.199419187,10 C0.962196907,11.4921462 2.05572777,12.7871275 3.38332044,13.7882524 L6.13548648,11.0360864 C6.04711451,10.7056331 6,10.3583187 6,10 C6,7.790861 7.790861,6 10,6 C10.3583187,6 10.7056331,6.04711451 11.0360864,6.13548648 L12.8095252,4.36204771 Z M16.363961,2.22182541 L17.7781746,3.63603897 L3.63603897,17.7781746 L2.22182541,16.363961 L16.363961,2.22182541 Z" id="Combined-Shape"></path> </g> </g> </svg> Blackout';
         blackoutButton.type = 'button';
         blackoutButton.addEventListener('click', () => this._state.highlight = false);
         blackoutButtonContainer.appendChild(blackoutButton);
         drawOptions.appendChild(blackoutButtonContainer);
         const doneButtonContainer = document.createElement('div');
-        doneButtonContainer.className = 'p-4 border-r border-neutral-600 cursor-pointer';
+        doneButtonContainer.className = 'feedback-widget-button feedback-widget-button-border';
         const doneButton = document.createElement('button');
         doneButton.className = "font-semi-bold";
         doneButton.innerText = 'Done';
