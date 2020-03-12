@@ -1,6 +1,6 @@
 {
   "name": "@davidlinc1/feedback.js",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Feedback tool for Aeries",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/davidlinc1/feedback.js#readme",
   "dependencies": {
-    "@davidlinc1/feedback.js": "^1.0.0-alpha.3",
+    "@davidlinc1/feedback.js": "^1.0.0-alpha.4",
     "html2canvas": "1.0.0-alpha.9"
   }
 }
