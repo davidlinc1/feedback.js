@@ -323,7 +323,9 @@ class Feedback {
         headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         const data = {
             description: this._form[0].value,
-            screenshot: this._screenshotCanvas.toDataURL()
+            screenshot: this._screenshotCanvas.toDataURL(),
+            url: window.location.host,
+            path: window.location.pathname
         };
         fetch(this._options.endpoint, {
             method: 'POST',
